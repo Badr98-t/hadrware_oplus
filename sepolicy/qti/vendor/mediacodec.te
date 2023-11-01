@@ -3,5 +3,6 @@ typeattribute mediacodec vendor_hal_qspmhal_client;
 set_prop(mediacodec, vendor_video_prop)
 
 allow mediacodec hal_dms_hwservice:hwservice_manager find;
+allow mediacodec hal_dms_default:binder { call transfer };
 binder_call(mediacodec, hal_dms_default)
 get_prop(mediacodec, vendor_audio_prop)
