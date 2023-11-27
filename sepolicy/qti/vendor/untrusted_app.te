@@ -5,3 +5,8 @@ allow {
   untrusted_app_29
   untrusted_app_30
 } { window_service oem_service }:service_manager find;
+
+allow untrusted_app zygote:unix_stream_socket { getopt };
+#allow untrusted_app sysfs_msm_subsys:dir { search };
+allow untrusted_app proc_zoneinfo:file { read };
+allow untrusted_app app_data_file:lnk_file { read };
